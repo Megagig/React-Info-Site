@@ -39,9 +39,26 @@ nav > img {
 main {
   padding: 57px 27px;
   color: #fff;
+  background-image: url('./Images/reactjs-icon 2.png');
+  background-repeat: no-repeat;
+  background-position: right 75%;
 }
 
 .main-text {
   margin: 0;
   font-size: 39px;
+  letter-spacing: -0.05em;
+}
+
+.main-lists {
+  margin-top: 46px;
+}
+
+.main-lists > li {
+  margin-bottom: 20px;
+}
+
+.main-lists > li ::marker {
+  font-size: 1.4rem;
+  color: #61dafb;
 }
