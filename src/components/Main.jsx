@@ -9,6 +9,7 @@ const Main = () => {
     { id: 3, name: 'Watching a movie', completed: false },
     { id: 4, name: 'Cooking', completed: false },
   ]);
+  const [show, setShow] = useState(true);
 
   const handleAdd = () => {
     setCount(count + 1);
@@ -31,14 +32,19 @@ const Main = () => {
       <main>
         <h1 className="main-text">Fun facts about React</h1>
         <ul className="main-lists">
-          {tasks.map((task) => (
-            <li key={task.id}>
-              {task.id} {task.name}
-              <button className="delete" onClick={() => handleDelete(task.id)}>
-                Deleted
-              </button>
-            </li>
-          ))}
+          {show &&
+            tasks.map((task) => (
+              <li key={task.id}>
+                {task.id} {task.name}
+                <button
+                  className="delete"
+                  onClick={() => handleDelete(task.id)}
+                >
+                  Deleted
+                </button>
+              </li>
+            ))}
+          {}
         </ul>
       </main>
       <div className="usestate">
