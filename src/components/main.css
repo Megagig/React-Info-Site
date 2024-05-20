@@ -25,6 +25,7 @@
 
 .main-lists > li {
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .main-lists > li ::marker {

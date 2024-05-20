@@ -21,20 +21,24 @@ const Main = () => {
   const handleReset = () => {
     setCount(0);
   };
+  const handleDelete = (id) => {
+    const newTasks = tasks.filter((task) => task.id !== id);
+    setTask(newTasks);
+  };
 
   return (
     <>
       <main>
         <h1 className="main-text">Fun facts about React</h1>
         <ul className="main-lists">
-          <li>
-            {tasks.map((task) => (
-              <span>
-                {task.id} {task.name}
-                <button className="delete">Deleted</button>
-              </span>
-            ))}
-          </li>
+          {tasks.map((task) => (
+            <li key={task.id}>
+              {task.id} {task.name}
+              <button className="delete" onClick={() => handleDelete(task.id)}>
+                Deleted
+              </button>
+            </li>
+          ))}
         </ul>
       </main>
       <div className="usestate">
