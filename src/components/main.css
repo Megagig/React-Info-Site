@@ -18,3 +18,30 @@
   color: #61dafb;
   margin-top: 90px;
 }
+
+.main-lists {
+  margin-top: 46px;
+}
+
+.main-lists > li {
+  margin-bottom: 20px;
+}
+
+.main-lists > li ::marker {
+  font-size: 1.4rem;
+  color: #61dafb;
+}
+.main-lists > li > span {
+  display: flex;
+  margin: 0;
+  font-size: 1.4rem;
+  color: #61dafb;
+}
+.delete {
+  color: #91184a;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.delete:hover {
+  color: #deebf8;
+}

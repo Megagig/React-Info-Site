@@ -49,16 +49,3 @@ main {
   font-size: 39px;
   letter-spacing: -0.05em;
 }
-
-.main-lists {
-  margin-top: 46px;
-}
-
-.main-lists > li {
-  margin-bottom: 20px;
-}
-
-.main-lists > li ::marker {
-  font-size: 1.4rem;
-  color: #61dafb;
-}

@@ -1,7 +1,15 @@
 import { useState } from 'react';
 import './main.css';
+
 const Main = () => {
   const [count, setCount] = useState(0);
+  const [tasks, setTask] = useState([
+    { id: 1, name: 'Reading a book', completed: false },
+    { id: 2, name: 'Playing football', completed: false },
+    { id: 3, name: 'Watching a movie', completed: false },
+    { id: 4, name: 'Cooking', completed: false },
+  ]);
+
   const handleAdd = () => {
     setCount(count + 1);
   };
@@ -13,20 +21,23 @@ const Main = () => {
   const handleReset = () => {
     setCount(0);
   };
+
   return (
     <>
       <main>
         <h1 className="main-text">Fun facts about React</h1>
         <ul className="main-lists">
-          <li>Was first released in 2013</li>
-          <li>Was originally created by Jordan Walke</li>
-          <li>Has well over 100K stars on GitHub</li>
-          <li>Is maintained by Facebook</li>
-          <li>Powers thousands of enterprise apps, including mobile apps</li>
+          <li>
+            {tasks.map((task) => (
+              <span>
+                {task.id} {task.name}
+                <button className="delete">Deleted</button>
+              </span>
+            ))}
+          </li>
         </ul>
       </main>
       <div className="usestate">
-        {/* <p className="Add">{count}</p> */}
         <p className="sub">{count}</p>
         <button className="Addition" onClick={handleAdd}>
           Add
@@ -41,5 +52,4 @@ const Main = () => {
     </>
   );
 };
-
 export default Main;
